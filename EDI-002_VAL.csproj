@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\magdaw\Documents\ExtraDach\EDI\EDI-002_OS.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7F10F90-B89A-4C5A-B944-3F6575B3892D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>EDI-002_VAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <ApplicationVersion>2.1.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>EDI_002_VAL</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CdnHydra">
+      <HintPath>..\..\KZD\ZZnaCSV\bin\Debug\CdnHydra.dll</HintPath>
+    </Reference>
+    <Reference Include="cdn_api20232.net">
+      <HintPath>..\..\..\Termedia\ImportJSON\ImportJSON\bin\Debug\cdn_api20232.net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SQL.cs" />
+    <Compile Include="Dane.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Towar.cs" />
+    <Compile Include="TowarEksport.cs" />
+    <Compile Include="Persist\Csv.cs" />
+    <Compile Include="PMHelper\Persistency\DB\SqlServer\ConnectionString.cs" />
+    <Compile Include="PMHelper\Persistency\DB\SqlServer\Parameter.cs" />
+    <Compile Include="PMHelper\Persistency\DB\SqlServer\Sql.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
